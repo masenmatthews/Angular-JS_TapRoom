@@ -1,32 +1,34 @@
 
     <!-- Sidebar -->
-<nav id="sidebar">
-  <div class="sidebar-header">
-      <h3>Keg list</h3>
-  </div>
-  <ul>
-    <li id="show-form" (click)="displayForm()">Add New Keg</li>
-    <div *ngFor="let currentKeg of childKegList">
-      <div *ngIf="currentKeg.abv < 5; then light"></div>
-      <div *ngIf="currentKeg.abv >= 5 && currentKeg.abv < 8; then darker"></div>
-      <div *ngIf="currentKeg.abv > 8; then darkest"></div>
-
-      <ng-template #light>
-        <li class="abv1" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | {{currentKeg.abv}} | $ {{currentKeg.price}}
-        </li>
-      </ng-template>
-
-      <ng-template #darker>
-        <li class="abv3" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | {{currentKeg.abv}} | $ {{currentKeg.price}}
-        </li>
-      </ng-template>
-
-      <ng-template #darkest>
-        <li class="abv5" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | {{currentKeg.abv}} | $ {{currentKeg.price}}
-        </li>
-      </ng-template>
-
+  <div id="sidebar">
+    <div class="sidebar-header">
+        <h3>Keg list</h3>
     </div>
+    <div class="container">
+      <div class="well">
+    <ul>
+      <li id="show-form" (click)="displayForm()">Add New Keg</li>
+      <div *ngFor="let currentKeg of childKegList">
+        <div *ngIf="currentKeg.abv < 5; then light"></div>
+        <div *ngIf="currentKeg.abv >= 5 && currentKeg.abv < 8; then darker"></div>
+        <div *ngIf="currentKeg.abv > 8; then darkest"></div>
 
-  </ul>
-</nav>
+        <ng-template #light>
+          <li class="abv1" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | {{currentKeg.abv}} | $ {{currentKeg.price}}
+          </li>
+        </ng-template>
+
+        <ng-template #darker>
+          <li class="abv3" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | {{currentKeg.abv}} | $ {{currentKeg.price}}
+          </li>
+        </ng-template>
+
+        <ng-template #darkest>
+          <li class="abv5" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | {{currentKeg.abv}} | $ {{currentKeg.price}}
+          </li>
+        </ng-template>
+      </div>
+    </ul>
+      </div>
+    </div>
+  </div>

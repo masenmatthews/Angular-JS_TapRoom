@@ -8,6 +8,34 @@ li {
   cursor: pointer;
 }
 
+.abv1 {
+  background: -webkit-linear-gradient(#f2b818, #d19e14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.abv2 {
+  background: -webkit-linear-gradient(#f2b818, #cc9616);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.abv3 {
+  background: -webkit-linear-gradient(#f2b818, #a87f10);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.abv4 {
+  background: -webkit-linear-gradient(#f2b818, #72570b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.abv5 {
+  background: -webkit-linear-gradient(#f2b818, #4c3a07);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 #sidebar {
   border-radius: 5px 5px 0 0;
   min-width: 250px;

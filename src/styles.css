@@ -4,6 +4,9 @@
 body {
   background-color: #FCDDBB;
   color: #F79256;
+  background-image: url("/assets/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .jumbotron {

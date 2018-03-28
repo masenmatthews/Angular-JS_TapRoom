@@ -1,3 +1,5 @@
+
+
 ul {
   list-style-type: none;
 }
@@ -38,8 +40,8 @@ li {
 
 #sidebar {
   border-radius: 5px 5px 0 0;
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 1140px;
+  max-width: 1250px;
   min-height: 100vh;
   background-color: #FCC488;
   color: #00B2CA;

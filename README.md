@@ -33,9 +33,11 @@ Build a small Angular app for a bar (or kombucha store) to track their kegs. Her
 
 ## Specifications
 
-* Make prices over $8 / pint show up as Gold and under $8 show as Green
 
 * Make abv show up as a specific shade based on %
+
+* Make prices over $8 / pint show up as Gold and under $8 show as Green
+
 
 * Pretty up the UI
 

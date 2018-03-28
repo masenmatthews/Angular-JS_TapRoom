@@ -11,23 +11,22 @@
       <div *ngIf="currentKeg.abv >= 5 && currentKeg.abv < 8; then darker"></div>
       <div *ngIf="currentKeg.abv > 8; then darkest"></div>
 
-      <!-- <li class="abv1" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.abv}}
-      </li> -->
+      <ng-template #light>
+        <li class="abv1" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | {{currentKeg.abv}} | $ {{currentKeg.price}}
+        </li>
+      </ng-template>
 
-      <ng-template #light><li class="abv1" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | <span ng-style=".abv1">{{currentKeg.abv}}</span>
-      </li></ng-template>
-      <ng-template #darker><li class="abv3" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | <span ng-style=".abv3">{{currentKeg.abv}}</span>
-      </li></ng-template>
-      <ng-template #darkest><li class="abv5" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | <span ng-style=".abv5">{{currentKeg.abv}}</span>
-      </li></ng-template>
+      <ng-template #darker>
+        <li class="abv3" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | {{currentKeg.abv}} | $ {{currentKeg.price}}
+        </li>
+      </ng-template>
+
+      <ng-template #darkest>
+        <li class="abv5" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | {{currentKeg.abv}} | $ {{currentKeg.price}}
+        </li>
+      </ng-template>
 
     </div>
-<!--
 
-      <ng-template #darker ngIf="currentKeg.abv >= 5 && currentKeg.abv < 7"><li class="abv3" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | <span ng-style=".abv3">{{currentKeg.abv}}</span>
-      </li></ng-template>
-      <ng-template #darkest><li class="abv5" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | <span ng-style=".abv3">{{currentKeg.abv}}</span>
-      </li></ng-template> -->
-    <!-- </div> -->
   </ul>
 </nav>

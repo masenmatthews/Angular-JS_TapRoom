@@ -1,0 +1,24 @@
+<div id="edit-keg-div" *ngIf="childSelectedKeg2">
+  <h3 class="keg-title">{{childSelectedKeg2.title}}</h3>
+  <h3>Edit Keg</h3>
+  <div class="form-group">
+    <label>Enter Keg Name:</label>
+    <input [(ngModel)]="childSelectedKeg2.name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Enter Keg Brand:</label>
+    <input [(ngModel)]="childSelectedKeg2.brand" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Enter Keg Price:</label>
+    <input [(ngModel)]="childSelectedKeg2.price" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Enter Keg ABV%:</label>
+    <input [(ngModel)]="childSelectedKeg2.abv" class="form-control">
+  </div>
+  <button (click)="finishedEditing()" class="btn btn-primary btn-lg">Done</button>
+  <button (click)="deleteKeg()" class="btn btn-danger btn-lg">Delete</button>
+
+
+</div>

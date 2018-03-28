@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Recipebox
 
-### By Andy Grossberg & Logan Tanous
+### By Andy Grossberg & Masen Matthews
 
 ## Description
 An Angular application to simulate the organization of a bar's beer inventory.

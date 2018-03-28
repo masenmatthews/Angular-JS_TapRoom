@@ -7,13 +7,13 @@
   </div>
 
   <div class="wrapper">
-    <app-recipe-list [childRecipeList] = 'masterRecipeList' (viewSender)="viewRecipe($event)" [showFormBool] = 'showForm' (clickedBool) = "updateShowForm($event)"></app-recipe-list>
+    <app-keg-list [childKegList] = 'masterKegList' (viewSender)="viewKeg($event)" [showFormBool] = 'showForm' (clickedBool) = "updateShowForm($event)"></app-keg-list>
     <div class="content-col">
       <div *ngIf="showForm">
-        <app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
+        <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
       </div>
-      <app-view-recipe [childSelectedRecipe] = 'selectedRecipe'  (clickSender)="editRecipe($event)"></app-view-recipe>
-      <app-edit-recipe [childSelectedRecipe2] = 'selectedRecipe2' (clickedDone)="finishedEditing()" (clickedDelete)="deleteRecipe()"></app-edit-recipe>
+      <app-view-keg [childSelectedKeg] = 'selectedKeg'  (clickSender)="editKeg($event)"></app-view-keg>
+      <app-edit-keg [childSelectedKeg2] = 'selectedKeg2' (clickedDone)="finishedEditing()" (clickedDelete)="deleteKeg()"></app-edit-keg>
     </div>
   </div>
 

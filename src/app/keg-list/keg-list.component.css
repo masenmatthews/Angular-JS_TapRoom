@@ -6,7 +6,7 @@ ul {
 
 li {
   margin-top: 10px;
-  font-size: 1.50em;
+  font-size: 1.75em;
   cursor: pointer;
 }
 
@@ -54,13 +54,23 @@ li {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #00B2CA;
-  color: #1D4E89;
+  font-size: 1.5em;
+  background: black;
+  text-align: center;
+  color: silver;
+  /*background: -webkit-linear-gradient(silver, lightgray);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
   border-radius: 5px 5px 0 0;
 }
 
 #show-form {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.75em;
   text-decoration: underline;
+  float: right;
+  margin-right: 40px;
+  color: orange;
+  background-color: black;
+  display: inline;
 }

@@ -9,7 +9,7 @@ import { Keg } from './models/keg.model';
 export class AppComponent {
   title = 'Tap Room';
 
-  masterKegList: Keg[] = [new Keg("Goose IPA","Goose Island Brewery",8.00,5.90,124),
+  masterKegList: Keg[] = [new Keg("Goose IPA","Goose Island Brewery",8.00,12,124),
   new Keg("Generic IPA","Harpoon Brewing Co.",8.00,5.9,124),
   new Keg("Budweiser","Anheiser Busch",6.00,3.45,124)];
   selectedKeg: Keg = null;

@@ -16,8 +16,10 @@ export class ViewKegComponent implements OnInit {
   }
 
   @Output() clickSender = new EventEmitter();
+  
   editButtonClicked(kegToEdit: Keg) {
     this.clickSender.emit(kegToEdit);
   }
+
 
 }

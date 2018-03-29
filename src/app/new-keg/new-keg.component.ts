@@ -7,8 +7,8 @@ import { Keg } from '../models/keg.model';
   styleUrls: ['./new-keg.component.css']
 })
 export class NewKegComponent {
-  @Output() sendKeg = new EventEmitter();
 
+  @Output() sendKeg = new EventEmitter();
 
   submitForm(name: string, brand: string, price: number, abv: number) {
     let newKeg: Keg = new Keg(name, brand, price, abv, 124);

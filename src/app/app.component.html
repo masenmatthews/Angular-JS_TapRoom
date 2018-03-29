@@ -2,37 +2,55 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <!-- <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+      </div> -->
       <div class="modal-body">
         <!-- test the modal -->
-        <div id="employee" class="wrapper well" *ngIf="!loggedIn; else notLogged"><!-- not logged in so we can see it -->
 
-        </div>
+        <ng-container id="employee" class="wrapper well" *ngIf="!loggedIn; then logged; else notLogged"><!-- not logged in so we can see it -->
+        </ng-container>
+
       <ng-template #logged>
         <app-view-keg [childSelectedKeg] = 'selectedKeg'  (clickSender)="editKeg($event)"></app-view-keg>
-        <app-edit-keg [childSelectedKeg2] = 'selectedKeg2' (clickedDone)="finishedEditing()" (clickedDelete)="deleteKeg()"></app-edit-keg>
+        <app-edit-keg [childSelectedKeg2] = 'selectedKeg2' (clickedDone)="finishedEditing()" (clickedDelete)="deleteKeg()" ></app-edit-keg>
       </ng-template>
 
       <ng-template #notLogged>
-        <app-view-keg [childSelectedKeg] = 'selectedKeg'>
+        <!-- <app-view-keg [childSelectedKeg] = 'selectedKeg'>
           <h3>{{childSelectedKeg.name}}</h3>
           <h4>{{childSelectedKeg.brand}}</h4>
           <p>{{childSelectedKeg.price}}</p>
           <p>{{childSelectedKeg.abv}}</p>
           <p>{{childSelectedKeg.pints}}</p>
-        </app-view-keg>
+        </app-view-keg> -->
+        <app-detail-keg [childSelectedKeg] = 'selectedKeg'>
+          <!-- <p>Hooray!</p>
+          <p>Banana Slug</p>
+          <h3>{{childSelectedKeg.name}}</h3>
+          <h4>{{childSelectedKeg.brand}}</h4>
+          <p>{{childSelectedKeg.price}}</p>
+          <p>{{childSelectedKeg.abv}}</p>
+          <p>{{childSelectedKeg.pints}}</p> -->
+        </app-detail-keg>
       </ng-template>
 
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      <button class="btn btn-primary" (click)="kegClicked(currentKeg)">Order</button>
-    </div>
+    <!-- <div class="modal-footer">
+      <div *ngIf="loggedIn"> -->
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <!-- <button (click)="finishedEditing()" data-dismiss="modal" class="btn btn-primary btn">Done</button>
+        <button class="btn btn-primary" (click)="kegClicked(currentKeg)">Order</button>
+      </div>
+      <div *ngIf="!loggedIn">
+        <button (click)="finishedEditing()" data-dismiss="modal" class="btn btn-primary btn">Done</button>
+        <button (click)="editBtnClicked(selectedKeg.name)" class="btn btn-info">Edit</button><!-- childSelectedKeg -->
+        <!-- <button (click)="deleteKeg()" data-dismiss="modal" class="btn btn-danger btn">Delete</button>
+      </div>
+    </div> -->
     </div>
   </div>
 </div>

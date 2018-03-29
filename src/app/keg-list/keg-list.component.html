@@ -33,14 +33,14 @@
           <div *ngIf="currentKeg.abv >= 5 && currentKeg.abv <= 8; then darker"></div>
           <div *ngIf="currentKeg.abv > 8; then darkest"></div>
 
-          <ng-template #light>
+          <ng-template #light><a data-toggle="modal" href="#exampleModal" (click)="kegClicked(currentKeg)">
             <li> <span class="abv1" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | ABV% {{currentKeg.abv}} | </span><span [ngClass]="{'cheapBeer': currentKeg.price <= 8, 'goodBeer': currentKeg.price > 8 }">${{currentKeg.price}}</span>
-            </li>
+            </li></a>
           </ng-template>
 
-          <ng-template #darker>
+          <ng-template #darker><a data-toggle="modal" href="#exampleModal" (click)="kegClicked(currentKeg)">
             <li> <span class="abv3" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | ABV% {{currentKeg.abv}} | </span><span [ngClass]="{'cheapBeer': currentKeg.price <= 8, 'goodBeer': currentKeg.price > 8 }">${{currentKeg.price}}</span>
-            </li>
+            </li></a>
           </ng-template>
 
           <ng-template #darkest><a data-toggle="modal" href="#exampleModal" (click)="kegClicked(currentKeg)">

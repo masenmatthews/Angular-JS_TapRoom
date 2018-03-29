@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Keg } from './models/keg.model';
+// import { ViewKegComponent } from './view-keg/view-keg.component';
+// import { EditKegComponent } from './edit-keg/edit-keg.component';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +32,11 @@ export class AppComponent {
   editKeg(clickedKeg) {
     this.selectedKeg2 = clickedKeg;
     this.selectedKeg = null;
+  }
+
+  editBtnClicked(childSelectedKeg) {
+    console.log("Look at me I'm editing keg # " + childSelectedKeg);
+    childSelectedKeg.editButtonClicked(childSelectedKeg);
   }
 
   viewKeg(clickedKeg) {

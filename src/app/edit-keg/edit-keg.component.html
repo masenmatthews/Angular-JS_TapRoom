@@ -17,8 +17,8 @@
     <label>Enter Keg ABV%:</label>
     <input [(ngModel)]="childSelectedKeg2.abv" class="form-control">
   </div>
-  <button (click)="finishedEditing()" class="btn btn-primary btn-lg">Done</button>
-  <button (click)="deleteKeg()" class="btn btn-danger btn-lg">Delete</button>
-
+  <button (click)="finishedEditing()" data-dismiss="modal" class="btn btn-primary btn">Done</button>
+  <button (click)="deleteKeg()" data-dismiss="modal" class="btn btn-danger btn">Delete</button>
+  <!-- <button (click)="editButtonClicked(childSelectedKeg)" class="btn btn-info">Edit</button> -->
 
 </div>

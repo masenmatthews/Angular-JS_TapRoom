@@ -1,3 +1,24 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        test the modal
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
   <div class="jumbotron">
@@ -12,12 +33,16 @@
       <div *ngIf="showForm">
         <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
       </div>
-      <app-view-keg [childSelectedKeg] = 'selectedKeg'  (clickSender)="editKeg($event)"></app-view-keg>
       <app-edit-keg [childSelectedKeg2] = 'selectedKeg2' (clickedDone)="finishedEditing()" (clickedDelete)="deleteKeg()"></app-edit-keg>
     </div>
   </div>
 
+  <div id="employee" class="wrapper well" *ngIf="!loggedIn"><!-- not logged in so we can see it -->
+    <app-view-keg [childSelectedKeg] = 'selectedKeg'  (clickSender)="editKeg($event)"></app-view-keg>
+  </div>
 
-
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
 
 </div>

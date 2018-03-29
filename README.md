@@ -79,13 +79,13 @@ Build a small Angular app for a bar (or kombucha store) to track their kegs. Her
 * Install and initialize (init -y) Node (if it isn't already)
 * Navigate to your root project directory
 * Type "npm init" and run through the package.json file filling in details as needed
-* Type "npm install"
 * Navigate to node_modules/.bin/ and type "jasmine init"
 * Navigate back to the project's root directory
 * Type "npm install dotenv-webpack --save-dev" to process environment variables (if you don't have Dotenv installed).
 * Type "npm install typescript -g" (unless you already have Typescript installed)
 * Type "npm install -g @angular/cli@1.6.5" (unless you already have Angular installed)
   - If you're on a Mac and get an error: Type "brew upgrade node"
+* Type "npm install"
 * Type "ng serve"
 * Point your browser to localhost:4200
 

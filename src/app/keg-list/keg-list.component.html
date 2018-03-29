@@ -1,5 +1,24 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        test the modal
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- Sidebar -->
+  <!-- Sidebar -->
   <div id="sidebar">
     <div class="sidebar-header">
         <h3>Keg list</h3>
@@ -8,24 +27,30 @@
       <div class="well">
     <ul>
       <div *ngFor="let currentKeg of childKegList">
-        <div *ngIf="currentKeg.abv < 5; then light;"></div>
-        <div *ngIf="currentKeg.abv >= 5 && currentKeg.abv <= 8; then darker"></div>
-        <div *ngIf="currentKeg.abv > 8; then darkest"></div>
+        <div *ngIf="currentKeg.pints > 0">
+          <div *ngIf="currentKeg.abv < 5; then light;"></div>
+          <div *ngIf="currentKeg.abv >= 5 && currentKeg.abv <= 8; then darker"></div>
+          <div *ngIf="currentKeg.abv > 8; then darkest"></div>
 
-        <ng-template #light>
-          <li> <span class="abv1" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | ABV% {{currentKeg.abv}} | </span><span [ngClass]="{'cheapBeer': currentKeg.price <= 8, 'goodBeer': currentKeg.price > 8 }">${{currentKeg.price}}</span>
-          </li>
-        </ng-template>
+          <ng-template #light>
+            <li> <span class="abv1" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | ABV% {{currentKeg.abv}} | </span><span [ngClass]="{'cheapBeer': currentKeg.price <= 8, 'goodBeer': currentKeg.price > 8 }">${{currentKeg.price}}</span>
+            </li>
+          </ng-template>
 
-        <ng-template #darker>
-          <li> <span class="abv3" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | ABV% {{currentKeg.abv}} | </span><span [ngClass]="{'cheapBeer': currentKeg.price <= 8, 'goodBeer': currentKeg.price > 8 }">${{currentKeg.price}}</span>
-          </li>
-        </ng-template>
+          <ng-template #darker>
+            <li> <span class="abv3" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | ABV% {{currentKeg.abv}} | </span><span [ngClass]="{'cheapBeer': currentKeg.price <= 8, 'goodBeer': currentKeg.price > 8 }">${{currentKeg.price}}</span>
+            </li>
+          </ng-template>
 
-        <ng-template #darkest>
-          <li> <span class="abv5" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | ABV% {{currentKeg.abv}} | </span><span [ngClass]="{'cheapBeer': currentKeg.price <= 8, 'goodBeer': currentKeg.price > 8 }">${{currentKeg.price}}</span>
-          </li>
-        </ng-template>
+          <ng-template #darkest><a data-toggle="modal" href="#exampleModal">
+
+
+
+            <li> <span class="abv5" (click)="kegClicked(currentKeg)">{{currentKeg.name}} | {{currentKeg.brand}} | ABV% {{currentKeg.abv}} | </span><span [ngClass]="{'cheapBeer': currentKeg.price <= 8, 'goodBeer': currentKeg.price > 8 }">${{currentKeg.price}}</span>
+            </li>
+          </a>
+          </ng-template>
+        </div>
       </div>
     </ul>
     </div>

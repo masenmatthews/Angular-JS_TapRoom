@@ -33,14 +33,13 @@ Build a small Angular app for a bar (or kombucha store) to track their kegs. Her
 
 ## Specifications
 
-
 * Make abv show up as a specific shade based on %
 
 * Make prices over $8 / pint show up as Magenta and under $8 show as Green
 
-* Don't show a beer if the keg has no pints  <--
+* Don't show a beer if the keg has no pints 
 
-* Implement beer description modal when beer is clicked on
+* Implement beer description modal when beer is clicked on <--
 
 * Add descriptions to beer (and a picture?)
 

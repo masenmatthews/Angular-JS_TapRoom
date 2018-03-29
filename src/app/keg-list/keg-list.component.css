@@ -40,6 +40,14 @@ li {
   -webkit-text-fill-color: transparent;
 }
 
+.cheapBeer {
+  color: chartreuse;
+}
+
+.goodBeer {
+  /*color:  rgb(252, 155, 212);*/
+  color: magenta;
+}
 
 #sidebar {
   border-radius: 5px 5px 0 0;

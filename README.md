@@ -36,8 +36,33 @@ Build a small Angular app for a bar (or kombucha store) to track their kegs. Her
 
 * Make abv show up as a specific shade based on %
 
-* Make prices over $8 / pint show up as Gold and under $8 show as Green
+* Make prices over $8 / pint show up as Magenta and under $8 show as Green
 
+* Don't show a beer if the keg has no pints  <--
+
+* Implement beer description modal when beer is clicked on
+
+* Add descriptions to beer (and a picture?)
+
+* Implement "order" button on modal so customer can order a beer or close
+
+* Implement subtraction of pints when clicked and bought
+
+* Add a note to menu if a keg is low
+
+* Implement pint subtraction from the appropriate keg when "order" button is clicked.
+
+* Implement employee login (changes "Employee Login" to "Employee Use")
+
+* Implement a modal for Employee Use
+
+* Alert logged in employee when a keg is low
+
+* Move Add Keg to employee modal
+
+* Move Edit Keg to employee modal
+
+* Do we need to make sure edited values don't reset? Add firebase?
 
 * Pretty up the UI
 

@@ -49,7 +49,7 @@ li {
   color: magenta;
 }
 
-#sidebar {
+#menu {
   border-radius: 5px 5px 0 0;
   min-width: 1140px;
   max-width: 1250px;
@@ -60,7 +60,7 @@ li {
   color: #00B2CA;
 }
 
-#sidebar .sidebar-header {
+#menu .menu-header {
   padding: 20px;
   font-size: 1.5em;
   background: black;

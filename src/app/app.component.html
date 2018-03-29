@@ -9,17 +9,20 @@
         </button>
       </div>
       <div class="modal-body">
-        test the modal
+        <!-- test the modal -->
+        <div id="employee" class="wrapper well" *ngIf="!loggedIn"><!-- not logged in so we can see it -->
+          <app-view-keg [childSelectedKeg] = 'selectedKeg'  (clickSender)="editKeg($event)"></app-view-keg>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button class="btn btn-primary" (click)="kegClicked(currentKeg)">Order</button>
       </div>
     </div>
   </div>
 </div>
 
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced. -->
 <div class="container">
   <div class="jumbotron">
     <h1 style="text-align:center; text-shadow: 5px 5px #56490F;" id="main-head">
@@ -37,12 +40,10 @@
     </div>
   </div>
 
-  <div id="employee" class="wrapper well" *ngIf="!loggedIn"><!-- not logged in so we can see it -->
-    <app-view-keg [childSelectedKeg] = 'selectedKeg'  (clickSender)="editKeg($event)"></app-view-keg>
-  </div>
+  <!-- div id="employee" came from here -->
 
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Launch demo modal
-  </button>
+  </button> -->
 
 </div>

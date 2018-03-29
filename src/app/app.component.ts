@@ -30,7 +30,6 @@ export class AppComponent {
   editKeg(clickedKeg) {
     this.selectedKeg2 = clickedKeg;
     this.selectedKeg = null;
-    //console.log("this is the clicked recipe: " + this.selectedRecipe.description);
   }
 
   viewKeg(clickedKeg) {

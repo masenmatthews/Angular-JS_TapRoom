@@ -1,8 +1,6 @@
-# TaproomAngular
+# Taproom_Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
-
-# Recipebox
 
 ### By Andy Grossberg & Masen Matthews
 
@@ -12,64 +10,44 @@ An Angular application to simulate the organization of a bar's beer inventory.
 ## Rules
 
 **Objectives**
-Build a small Angular app for a bar (or kombucha store) to track their kegs. Here are some user stories to get you started:
+Build a small Angular app that a bar can use to track their kegs.
 
-**patron**
+**Patron - User Expectations**
 1) As a patron, I want to see a list/menu of all available kegs.
-  - For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
 2) As a patron, I want to have kegs prices to be color-coded for easy readability.
-  - Perhaps based on their price (greater or less than $5 per pint, perhaps) or the particular style of beer or kombucha.
 3) As a patron, I want to use the alcohol content property to display stronger beers differently than weaker beers.
 
-**employee**
+**Employee - User Expectations**
 1) As an employee, I want to fill out a form when I tap a new keg to add it to the list.
-  - (Don't worry about authenticating employee user accounts yet.)
 2) As an employee, I want the option to edit a keg's properties after entering them just in case I make a mistake.
 3) As an employee, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1.
 4) As an employee, I want to be able to see kegs with less than 10 pints left so I can be ready to change them.
 
-**both**
+**Employee + Patron - Universal User Expectations**
 1) As a patron and/or employee, I want to see how many pints are left in a keg. (Hint: A full keg has roughly 124 pints).
 
 ## Specifications
 
-* Make abv show up as a specific shade based on %
-
-* Make prices over $8 / pint show up as Magenta and under $8 show as Green
-
-* Don't show a beer if the keg has no pints
-
+* Make ABV show up as a specific shade based on percentage
+* Make prices over $8-per-pint show up as magenta while prices under $8 show up as green
+* Don't show a beer if the keg is empty
 * Implement beer description modal when beer is clicked on
-
-* Add descriptions to beer (and a picture?)
-
-* Implement "order" button on modal so customer can order a beer or close
-
+* Add descriptions to beer
+* Implement "order" button on modal so that a customer can order a beer or close
 * Implement subtraction of pints when clicked and bought
 
-* Add a note to menu if a keg is low <--
+## Future expansion
 
+* Add a note to menu if a keg is low
 * Implement pint subtraction from the appropriate keg when "order" button is clicked.
-
 * Implement employee login (changes "Employee Login" to "Employee Use")
-
 * Implement a modal for Employee Use
-
 * Alert logged in employee when a keg is low
-
 * Move Add Keg to employee modal
-
 * Move Edit Keg to employee modal
-
 * Do we need to make sure edited values don't reset? Add firebase?
-
 * Pretty up the UI
-
 * Refactor code as needed.
-
-## Methodology
-
-. . .
 
 ## Technologies Used
 
@@ -112,9 +90,6 @@ Build a small Angular app for a bar (or kombucha store) to track their kegs. Her
 * Type "npm install"
 * Type "ng serve"
 * Point your browser to localhost:4200
-
-## Future expansion
-. . .
 
 ## Known Bugs and Issues
 

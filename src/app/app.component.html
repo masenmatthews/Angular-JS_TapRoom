@@ -21,44 +21,15 @@
         </div>
         <app-edit-keg [childSelectedKeg2] = 'selectedKeg2' (clickedDone)="finishedEditing()" (clickedDelete)="deleteKeg()" ></app-edit-keg>
       </ng-template>
-
       <ng-template #notLogged>
-        <!-- <app-view-keg [childSelectedKeg] = 'selectedKeg'>
-          <h3>{{childSelectedKeg.name}}</h3>
-          <h4>{{childSelectedKeg.brand}}</h4>
-          <p>{{childSelectedKeg.price}}</p>
-          <p>{{childSelectedKeg.abv}}</p>
-          <p>{{childSelectedKeg.pints}}</p>
-        </app-view-keg> -->
         <app-detail-keg [childSelectedKeg] = 'selectedKeg'>
-          <!-- <p>Hooray!</p>
-          <p>Banana Slug</p>
-          <h3>{{childSelectedKeg.name}}</h3>
-          <h4>{{childSelectedKeg.brand}}</h4>
-          <p>{{childSelectedKeg.price}}</p>
-          <p>{{childSelectedKeg.abv}}</p>
-          <p>{{childSelectedKeg.pints}}</p> -->
         </app-detail-keg>
       </ng-template>
-
     </div>
-    <!-- <div class="modal-footer">
-      <div *ngIf="loggedIn"> -->
-        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-        <!-- <button (click)="finishedEditing()" data-dismiss="modal" class="btn btn-primary btn">Done</button>
-        <button class="btn btn-primary" (click)="kegClicked(currentKeg)">Order</button>
-      </div>
-      <div *ngIf="!loggedIn">
-        <button (click)="finishedEditing()" data-dismiss="modal" class="btn btn-primary btn">Done</button>
-        <button (click)="editBtnClicked(selectedKeg.name)" class="btn btn-info">Edit</button><!-- childSelectedKeg -->
-        <!-- <button (click)="deleteKeg()" data-dismiss="modal" class="btn btn-danger btn">Delete</button>
-      </div>
-    </div> -->
     </div>
   </div>
 </div>
 
-<!-- The content below is only a placeholder and can be replaced. -->
 <div class="container">
   <div class="jumbotron">
     <h1 style="text-align:center; text-shadow: 5px 5px #56490F;" id="main-head">
@@ -68,18 +39,5 @@
 
   <div class="wrapper">
     <app-keg-list [childKegList] = 'masterKegList' (viewSender)="viewKeg($event)" [showFormBool] = 'showForm' (clickedBool) = "updateShowForm($event)"></app-keg-list>
-    <!-- <div class="content-col">
-      <div *ngIf="showForm">
-        <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
-      </div> -->
-      <!-- <app-edit-keg [childSelectedKeg2] = 'selectedKeg2' (clickedDone)="finishedEditing()" (clickedDelete)="deleteKeg()">where am i?</app-edit-keg> -->
-    <!-- </div> -->
   </div>
-
-  <!-- div id="employee" came from here -->
-
-  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button> -->
-
 </div>

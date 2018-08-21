@@ -2,17 +2,16 @@
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 
 body {
-  background-color: #FCDDBB;
   color: #F79256;
-  background-color: rgba(240, 177, 20, 0.47);
-  /*background-image: url("/assets/img/background.png");
+  background-image: url("/assets/img/woodgrain-background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;*/
-
+  background-size: cover;
 }
+
 a {
     text-decoration: none !important;
 }
+
 .container {
   padding-top: 25px;
 }
@@ -25,7 +24,7 @@ a {
   background-image: url("/assets/img/woodgrain.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color: gold;
+  color: silver;
 }
 
 .wrapper {

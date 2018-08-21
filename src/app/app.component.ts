@@ -12,8 +12,15 @@ export class AppComponent {
   title = 'Tap Room';
 
   masterKegList: Keg[] = [new Keg("Goose IPA","Goose Island Brewery",8.00,12,124),
+  new Keg("Elite Stout","Pyramid Brewing",11.00,9.7,124),
+  new Keg("Royal Double IPA","Rogue Brewing Co.",9.00,10.1,124),
   new Keg("Generic IPA","Harpoon Brewing Co.",8.00,5.9,124),
-  new Keg("Budweiser","Anheiser Busch",6.00,3.45,124)];
+  new Keg("Breakside IPA","Breakside",6.00,6.9,124),
+  new Keg("Rogue Pilsner","Rogue",4.50,4.5,124),
+  new Keg("Budweiser","Anheiser Busch",3.00,3.45,124),
+  new Keg("Pabst Blue Ribbon","Pabst",1.50,3.3,124),
+];
+
   selectedKeg: Keg = null;
   selectedKeg2: Keg = null;
   showForm: boolean = false;
@@ -35,7 +42,7 @@ export class AppComponent {
   }
 
   editBtnClicked(childSelectedKeg) {
-    console.log("Look at me I'm editing keg # " + childSelectedKeg);
+    console.log("Editing keg # " + childSelectedKeg);
     childSelectedKeg.editButtonClicked(childSelectedKeg);
   }
 

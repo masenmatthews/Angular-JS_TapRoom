@@ -4,6 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### By: Masen Matthews and Andy Grossberg
 
+## Live Preview
+This project features a live preview through Firebase. You can view it by navigating to https://angular-taproom.firebaseapp.com/. 
+
 ## Description
 An Angular application to simulate the organization of a bar's beer inventory.
 

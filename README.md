@@ -1,8 +1,8 @@
-# Taproom_Angular
+# Angular Taproom
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
-### By Andy Grossberg & Masen Matthews
+### By: Masen Matthews and Andy Grossberg
 
 ## Description
 An Angular application to simulate the organization of a bar's beer inventory.
@@ -27,6 +27,7 @@ Build a small Angular app that a bar can use to track their kegs.
 1) As a patron and/or employee, I want to see how many pints are left in a keg. (Hint: A full keg has roughly 124 pints).
 
 ## Specifications
+### NOTE: Login features were not completed at the time that this project was made. There is additional functionality that hasn't been fleshed out and may be completed at a later date.
 
 * Make ABV show up as a specific shade based on percentage
 * Make prices over $8-per-pint show up as magenta while prices under $8 show up as green
@@ -53,12 +54,10 @@ Build a small Angular app that a bar can use to track their kegs.
 
 * HTML
 * CSS
-* Typescript/Javascript
-* Node
+* TypeScript/JavaScript
 * Angular
 
 ## Dependencies and plugins
-
 **Dependencies**
 * Webpack 4.0.1 (as my module bundler)
 * Jasmine (for tests)
@@ -97,7 +96,7 @@ There are no known bugs at this time.
 
 ## Support and contact details
 
-**Contact the authors at andy.grossberg@gmail.com -or- masenmatthews@gmail.com**
+**Contact the authors at masenmatthews@gmail.com -or- andy.grossberg@gmail.com **
 
 ## Development server
 
